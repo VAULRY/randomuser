@@ -6,23 +6,25 @@
     <title>Random User</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body> 
-    <div id="carte-visite">  
-    <div class="container">
-      <h1>Nom Prénom</h1>
-      <div id="user"></div>
-      <a href="" class="refresh">New</a>
-    </div>
-    <div class="user_info">
-      <h2>User Information</h2>
-      <p id="name">xx</p>
-      <p id="email">xx</p>
-      <p id="phone">xx</p>
-      <p id="address">xx</p>
+  <body>
+    <div class="loader" id="loader">
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
       </div>
-    </div> 
+    <div id="carte-visite">
+      <div class="container">
+        <h1 id="name"></h1>
+        <div id="user"></div>
+      </div>
+      <div class="user_info">
+        <h2>User Information</h2>
+        <p id="name"></p>
+        <p id="email"></p>
+        <p id="phone"></p>
+        <p id="address"></p>
+      </div>
+    </div>
     <script src="script.js"></script>
-   
-    
   </body>
 </html>

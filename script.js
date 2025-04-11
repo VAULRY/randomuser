@@ -4,6 +4,18 @@ const userDiv = document.getElementById('user');
         const phoneDiv = document.getElementById('phone');
         const addressDiv = document.getElementById('address');
     
+        const loader = document.getElementById('loader');
+        const carteVisite = document.getElementById('carte-visite');
+        const userInfo = document.querySelector('.user_info');
+    
+        // Simulate loading time
+        setTimeout(() => {
+          loader.style.display = 'none';
+          carteVisite.style.display = 'flex';
+        //   userInfo.style.display = 'block';
+        }, 2000); // Adjust the time as needed (2000ms = 2 seconds)
+      
+
         function fetchUser() {
             fetch('https://randomuser.me/api/')
             .then(response => response.json())
@@ -18,10 +30,6 @@ const userDiv = document.getElementById('user');
             .catch(error => console.error('Error fetching user:', error));
         }
     
-        document.querySelector('.refresh').addEventListener('click', (e) => {
-            e.preventDefault();
-            fetchUser();
-        });
     
         // Fetch a user on page load
         fetchUser();
